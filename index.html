@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Data Science Portfolio</title>
+    <title>Ben Lehmann - Data Science Portfolio</title>
     <style>
         * {
             margin: 0;
@@ -38,7 +38,13 @@
 
         header p {
             font-size: 1.3em;
+            margin-bottom: 10px;
+        }
+
+        header .subtitle {
+            font-size: 1.1em;
             margin-bottom: 30px;
+            opacity: 0.95;
         }
 
         .social-links a {
@@ -106,10 +112,27 @@
             line-height: 1.8;
         }
 
+        .education {
+            background: #f7fafc;
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 30px;
+            border-left: 4px solid #667eea;
+        }
+
+        .education h3 {
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+
+        .education p {
+            color: #4a5568;
+        }
+
         /* Skills Section */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
             margin-top: 40px;
         }
@@ -135,10 +158,84 @@
             color: #4a5568;
         }
 
+        .skill-category li:before {
+            content: "▹ ";
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        /* Experience Section */
+        #experience {
+            background: #f7fafc;
+        }
+
+        .experience-grid {
+            display: grid;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .experience-card {
+            background: white;
+            padding: 35px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-left: 4px solid #667eea;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .experience-header h3 {
+            color: #2d3748;
+            font-size: 1.4em;
+        }
+
+        .experience-header .location {
+            color: #667eea;
+            font-weight: 500;
+        }
+
+        .company {
+            font-size: 1.1em;
+            color: #4a5568;
+            margin-bottom: 5px;
+        }
+
+        .date {
+            color: #718096;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        .experience-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .experience-card li {
+            padding: 8px 0;
+            color: #4a5568;
+            line-height: 1.7;
+        }
+
+        .experience-card li:before {
+            content: "→ ";
+            color: #667eea;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
         /* Projects Section */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
             gap: 40px;
             margin-top: 40px;
         }
@@ -164,7 +261,7 @@
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 1.2em;
+            font-size: 3em;
         }
 
         .project-content {
@@ -176,9 +273,21 @@
             color: #2d3748;
         }
 
-        .project-content p {
-            color: #4a5568;
+        .project-content ul {
+            list-style: none;
             margin-bottom: 15px;
+            padding-left: 0;
+        }
+
+        .project-content li {
+            padding: 5px 0;
+            color: #4a5568;
+        }
+
+        .project-content li:before {
+            content: "• ";
+            color: #667eea;
+            font-weight: bold;
         }
 
         .tech-stack {
@@ -212,11 +321,37 @@
             color: #764ba2;
         }
 
-        /* Contact Section */
-        #contact {
+        /* Certifications Section */
+        #certifications {
             background: #f7fafc;
         }
 
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .cert-card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .cert-card h3 {
+            color: #2d3748;
+            margin-bottom: 8px;
+            font-size: 1.2em;
+        }
+
+        .cert-card p {
+            color: #4a5568;
+        }
+
+        /* Contact Section */
         .contact-content {
             max-width: 600px;
             margin: 0 auto;
@@ -276,6 +411,14 @@
                 flex-wrap: wrap;
                 gap: 15px;
             }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .experience-header {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
@@ -283,11 +426,12 @@
     <!-- Header -->
     <header>
         <div class="container">
-            <h1>Your Name</h1>
+            <h1>Ben Lehmann</h1>
             <p>Data Scientist | Analytics Professional</p>
+            <p class="subtitle">B.S. Statistics, Minor in Data Science - Iowa State University</p>
             <div class="social-links">
-                <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-                <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+                <a href="https://github.com/BenLehmann12" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/ben-lehmann" target="_blank">LinkedIn</a>
                 <a href="mailto:your.email@example.com">Email</a>
             </div>
         </div>
@@ -298,7 +442,9 @@
         <ul>
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="#certifications">Certifications</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -308,8 +454,14 @@
         <div class="container">
             <h2>About Me</h2>
             <div class="about-content">
-                <p>I'm a data science professional passionate about extracting insights from complex datasets and building predictive models. With experience in machine learning, statistical analysis, and data visualization, I help organizations make data-driven decisions.</p>
-                <p>Currently seeking opportunities to apply my skills in a challenging data science or analytics role.</p>
+                <p>I'm a data scientist with a strong foundation in statistics and machine learning, passionate about leveraging data to drive actionable insights. With hands-on experience in building deep learning models, creating interactive dashboards, and developing ETL pipelines, I help organizations make data-driven decisions that deliver measurable impact.</p>
+                <p>My expertise spans Python, R, SQL, cloud platforms, and advanced statistical methods. I thrive on translating complex models into clear, actionable results for cross-functional teams.</p>
+                
+                <div class="education">
+                    <h3>Iowa State University</h3>
+                    <p><strong>Bachelor of Science in Statistics</strong></p>
+                    <p>Minor in Data Science | Ames, IA</p>
+                </div>
             </div>
         </div>
     </section>
@@ -317,42 +469,126 @@
     <!-- Skills Section -->
     <section id="skills">
         <div class="container">
-            <h2>Skills & Tools</h2>
+            <h2>Technical Skills</h2>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3>Programming</h3>
+                    <h3>Programming Languages</h3>
                     <ul>
-                        <li>Python (Pandas, NumPy, Scikit-learn)</li>
-                        <li>R</li>
-                        <li>SQL</li>
-                        <li>Java/Scala</li>
+                        <li>Python (Pandas, NumPy, Scikit-Learn)</li>
+                        <li>TensorFlow & PyTorch</li>
+                        <li>R Programming</li>
+                        <li>Java</li>
                     </ul>
                 </div>
                 <div class="skill-category">
-                    <h3>Machine Learning</h3>
+                    <h3>Cloud & Databases</h3>
                     <ul>
-                        <li>Supervised/Unsupervised Learning</li>
-                        <li>Deep Learning (TensorFlow, PyTorch)</li>
-                        <li>NLP</li>
-                        <li>Computer Vision</li>
+                        <li>SQL, MySQL, PostgreSQL</li>
+                        <li>AWS, Snowflake</li>
+                        <li>Salesforce, Oracle</li>
+                        <li>Hadoop, SAS</li>
                     </ul>
                 </div>
                 <div class="skill-category">
-                    <h3>Data Visualization</h3>
+                    <h3>Data Analytics</h3>
                     <ul>
+                        <li>Microsoft Power BI</li>
                         <li>Tableau</li>
-                        <li>Power BI</li>
-                        <li>Matplotlib/Seaborn</li>
-                        <li>Plotly/D3.js</li>
+                        <li>Microsoft Excel (Advanced)</li>
+                        <li>Data Visualization & Manipulation</li>
                     </ul>
                 </div>
                 <div class="skill-category">
-                    <h3>Big Data & Cloud</h3>
+                    <h3>Statistical Methods</h3>
                     <ul>
-                        <li>Apache Spark</li>
-                        <li>AWS (S3, EC2, SageMaker)</li>
-                        <li>Azure</li>
-                        <li>Docker</li>
+                        <li>Regression & Predictive Modeling</li>
+                        <li>Hypothesis Testing & A/B Testing</li>
+                        <li>Classification Analysis</li>
+                        <li>Time Series Analysis</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Core Competencies</h3>
+                    <ul>
+                        <li>Agile & Scrum</li>
+                        <li>ETL Pipeline Development</li>
+                        <li>Data Cleaning & Wrangling</li>
+                        <li>Dashboard Design</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
+            <h2>Work Experience</h2>
+            <div class="experience-grid">
+                <!-- Experience 1 -->
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div>
+                            <h3>Data Scientist Fellow</h3>
+                            <p class="company">Ames National Laboratory</p>
+                        </div>
+                        <span class="location">Ames, IA</span>
+                    </div>
+                    <p class="date">May 2024 – September 2024</p>
+                    <ul>
+                        <li>Engineered and deployed deep learning models using Python and TensorFlow for real-time sign language recognition, achieving 95% accuracy across 10,000+ training samples using CNN architecture</li>
+                        <li>Created interactive Power BI dashboards tracking energy consumption trends across 5+ facilities around Ames</li>
+                        <li>Constructed machine learning models in Python and R on 10GB+ large-scale distributed datasets (climate, chemical, and energy sectors), improving prediction accuracy by 10% through feature engineering</li>
+                        <li>Presented technical findings to cross-functional teams and translated complex ML models into actionable results</li>
+                    </ul>
+                </div>
+
+                <!-- Experience 2 -->
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div>
+                            <h3>Corporate Relations Analyst</h3>
+                            <p class="company">Iowa State Foundation</p>
+                        </div>
+                        <span class="location">Ames, IA</span>
+                    </div>
+                    <p class="date">April 2023 – September 2023</p>
+                    <ul>
+                        <li>Designed Tableau dashboards visualizing quarterly donation trends, accelerating accurate decision-making by 25%</li>
+                        <li>Developed ETL pipelines using SQL queries and R scripts, processing 16,000+ rows of donor records, identifying high-value donor importance, optimizing fundraising strategies, and reducing manual analysis time by 20%</li>
+                        <li>Streamlined and automated donor data using Excel, leveraging pivot tables and VBA, boosted university fundraising performance by 18%</li>
+                    </ul>
+                </div>
+
+                <!-- Experience 3 -->
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div>
+                            <h3>Research Analyst Intern</h3>
+                            <p class="company">Kingland Systems</p>
+                        </div>
+                        <span class="location">Ames, IA</span>
+                    </div>
+                    <p class="date">June 2022 – January 2023</p>
+                    <ul>
+                        <li>Cleaned over 5,000+ structured records using SQL and Excel, implementing data quality checks and validation rules that improved data accuracy by 15% across reporting systems</li>
+                        <li>Maintained data quality in Salesforce CRM, resolving inconsistencies across 3 teams and enhancing data integrity</li>
+                        <li>Enhanced detailed data entry documentation, reducing data entry errors by 25% across the organization</li>
+                    </ul>
+                </div>
+
+                <!-- Extracurricular -->
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div>
+                            <h3>Assistant Club Officer</h3>
+                            <p class="company">Data Science Club, Iowa State University</p>
+                        </div>
+                        <span class="location">Ames, IA</span>
+                    </div>
+                    <p class="date">2022 – 2025</p>
+                    <ul>
+                        <li>Helped facilitate a group of 15 students in semester-long machine learning group projects using Python, SQL, Tableau, and R</li>
                     </ul>
                 </div>
             </div>
@@ -363,65 +599,96 @@
     <section id="projects">
         <div class="container">
             <h2>Featured Projects</h2>
+            <p style="text-align: center; margin-bottom: 30px; color: #4a5568;">
+                <a href="projects.html" style="color: #667eea; text-decoration: none; font-weight: 500; font-size: 1.1em;">View All Projects →</a>
+            </p>
             <div class="projects-grid">
                 <!-- Project 1 -->
                 <div class="project-card">
-                    <div class="project-image">Project Image</div>
+                    <div class="project-image">🔬</div>
                     <div class="project-content">
-                        <h3>Customer Churn Prediction</h3>
-                        <p>Built a machine learning model to predict customer churn with 92% accuracy, helping reduce customer attrition by 15%.</p>
+                        <h3>Breast Cancer Diagnostics</h3>
+                        <ul>
+                            <li>Initiated comprehensive statistical analysis (Hotelling's T², Shapiro-Wilk, ANOVA) and data analysis in R to validate feature distributions and model normality assumptions</li>
+                            <li>Built classification models (logistic regression, random forest), achieving 94% accuracy in predicting tumor malignancy, with improved recall to minimize false negatives</li>
+                            <li>Evaluated models using clustering, ROC-AUC analysis, precision-recall curves, and cross-validation</li>
+                        </ul>
                         <div class="tech-stack">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Scikit-learn</span>
-                            <span class="tech-tag">XGBoost</span>
-                            <span class="tech-tag">Pandas</span>
+                            <span class="tech-tag">R</span>
+                            <span class="tech-tag">Logistic Regression</span>
+                            <span class="tech-tag">Random Forest</span>
+                            <span class="tech-tag">Statistical Analysis</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" target="_blank">GitHub →</a>
-                            <a href="#" target="_blank">Live Demo →</a>
+                            <a href="https://github.com/BenLehmann12/R-Final-Project" target="_blank">View on GitHub →</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project 2 -->
                 <div class="project-card">
-                    <div class="project-image">Project Image</div>
+                    <div class="project-image">📊</div>
                     <div class="project-content">
-                        <h3>Sales Forecasting Dashboard</h3>
-                        <p>Created an interactive dashboard for sales forecasting using time series analysis and ARIMA models.</p>
+                        <h3>Metro Unemployment Dashboard</h3>
+                        <ul>
+                            <li>Made an interactive R Shiny dashboard to analyze unemployment trends across 100+ US metropolitan areas using Federal Reserve economic data</li>
+                            <li>Applied statistical analysis and time series analysis, visualized state and quarterly unemployment trends, identifying seasonal patterns and geographic variations</li>
+                            <li>Regression model to forecast future unemployment rates, providing insights to understand metro economic trajectories</li>
+                        </ul>
                         <div class="tech-stack">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Tableau</span>
-                            <span class="tech-tag">ARIMA</span>
-                            <span class="tech-tag">SQL</span>
+                            <span class="tech-tag">R Shiny</span>
+                            <span class="tech-tag">Time Series</span>
+                            <span class="tech-tag">Regression</span>
+                            <span class="tech-tag">Data Visualization</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" target="_blank">GitHub →</a>
-                            <a href="#" target="_blank">Dashboard →</a>
+                            <a href="https://github.com/BenLehmann12/Analytics-Projects" target="_blank">View on GitHub →</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 3 -->
+                <!-- Project 3 - Sign Language Recognition -->
                 <div class="project-card">
-                    <div class="project-image">Project Image</div>
+                    <div class="project-image">🤖</div>
                     <div class="project-content">
-                        <h3>Sentiment Analysis Tool</h3>
-                        <p>Developed an NLP-based sentiment analysis tool to classify customer reviews with 88% accuracy.</p>
+                        <h3>Real-Time Sign Language Recognition</h3>
+                        <ul>
+                            <li>Developed deep learning CNN model using TensorFlow for sign language recognition with 95% accuracy</li>
+                            <li>Trained on 10,000+ image samples with real-time inference capabilities</li>
+                            <li>Deployed production-ready model for accessibility applications</li>
+                        </ul>
                         <div class="tech-stack">
                             <span class="tech-tag">Python</span>
-                            <span class="tech-tag">NLTK</span>
                             <span class="tech-tag">TensorFlow</span>
-                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">CNN</span>
+                            <span class="tech-tag">Deep Learning</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" target="_blank">GitHub →</a>
-                            <a href="#" target="_blank">Try it →</a>
+                            <a href="https://github.com/BenLehmann12" target="_blank">View Projects →</a>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <!-- Add more projects as needed -->
+    <!-- Certifications Section -->
+    <section id="certifications">
+        <div class="container">
+            <h2>Certifications</h2>
+            <div class="cert-grid">
+                <div class="cert-card">
+                    <h3>Machine Learning Specialization</h3>
+                    <p>Stanford University / DeepLearning.AI (Coursera, 2024)</p>
+                </div>
+                <div class="cert-card">
+                    <h3>IBM Data Analyst Professional</h3>
+                    <p>IBM (Coursera, 2024)</p>
+                </div>
+                <div class="cert-card">
+                    <h3>Google Data Analytics</h3>
+                    <p>Google (Coursera, 2023)</p>
+                </div>
             </div>
         </div>
     </section>
@@ -431,11 +698,11 @@
         <div class="container">
             <h2>Get In Touch</h2>
             <div class="contact-content">
-                <p>I'm currently open to new opportunities in data science and analytics. Let's connect!</p>
+                <p>I'm currently seeking opportunities in data science and analytics. Let's connect and discuss how I can contribute to your team!</p>
                 <div class="contact-buttons">
                     <a href="mailto:your.email@example.com">Send Email</a>
-                    <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
-                    <a href="resume.pdf" target="_blank">Download Resume</a>
+                    <a href="https://linkedin.com/in/ben-lehmann" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/BenLehmann12" target="_blank">GitHub</a>
                 </div>
             </div>
         </div>
@@ -444,7 +711,7 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2024 Your Name. Built with passion for data science.</p>
+            <p>&copy; 2024 Ben Lehmann. Built with passion for data science.</p>
         </div>
     </footer>
 </body>
