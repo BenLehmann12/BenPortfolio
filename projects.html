@@ -680,6 +680,49 @@
                     <a href="migration_report.docx" download>Read the Report</a>
                 </div>
             </div>
+            
+            <!-- GDP Regional and States -->
+            <div class="project-detailed" data-category="dashboard analytics" id="data-analytics">
+                <div class="project-header">
+                    <div>
+                        <h3>📊 Iowa Tax Analysis</h3>
+                        <p style="color: #718096; font-style: italic;">Interactive Analytics Project</p>
+                    </div>
+                    <span class="project-category">Data Analytics</span>
+                </div>
+
+                <p class="project-description">
+                    Interactive Power BI and Python dashboard for comprehensive analysis of Sales Taxes trends across the 99 Counties around Iowa from 2011 to 2025. Leverages Iowa Gov't economic data to provide insights into state tax patterns, quarterly patterns, and predictive and time forecasting.
+                </p>
+
+                <div class="project-metrics">
+                    <div class="metric">
+                        <span class="metric-value">Time Series</span>
+                        <span class="metric-label">Forecasting Model</span>
+                    </div>
+                </div>
+
+                <div class="project-highlights">
+                    <h4>Key Achievements</h4>
+                    <ul>
+                        <li>Built an end-to-end analytics pipeline in Python (pandas, NumPy, SciPy, statsmodels, scikit-learn, XGBoost) analyzing 14+ years of quarterly retail sales tax data (48K+ records, 99 counties), delivering a fully-documented Jupyter Notebook and an interactive Power BI dashboard (DAX, star-schema data modeling, 5 pages) for stakeholder reporting.</li>
+                        <li>Designed and executed hypothesis tests and an A/B test comparing urban vs. rural county tax revenue (Mann-Whitney U, Welch's t-test, Kruskal-Wallis, Levene's test), identifying a statistically significant large effect (Cohen's d ≈ 2.9, p < 0.001) with bootstrap-validated 95% confidence intervals and post-hoc power analysis.</li>
+                        <li>Built and validated a SARIMA(1,1,1)(1,1,1,4) time series forecasting model, confirming stationarity via ADF/KPSS tests and residual white-noise behavior via the Ljung-Box test (p = 0.67), achieving ~6% MAPE on held-out quarterly forecasts</li>
+                        <li>Trained and benchmarked 8 machine learning models (Linear/Ridge Regression, KNN, Random Forest, Gradient Boosting, XGBoost, Logistic Regression) using time-respecting train/test splits, reaching 99.4% classification accuracy (AUC > 0.99) and R² > 0.98 on regression forecasts, validated with ROC curves and feature importance analysis.</li>
+                    </ul>
+                </div>
+
+                <div class="tech-stack">
+                    <span class="tech-stack-label">Tech Stack:</span>
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Plotly</span>
+                    <span class="tech-tag">SQL</span>
+                    <span class="tech-tag">Time Series Modeling</span>
+                    <span class="tech-tag">Power BI</span>
+                    <span class="tech-tag">ARIMA, SARIMA</span>
+                    <span class="tech-tag">Regression Analysis</span>
+                </div>
+            </div>
 
 
             <!-- GDP Regional and States -->
